@@ -22,20 +22,25 @@ Claude Code already saves the raw JSONL transcript of every session in `~/.claud
 
 ## Installation
 
-From a Claude Code session:
+This repo is a single plugin, not a marketplace, so it's installed *through* a marketplace that lists it.
+
+### Recommended: via the `claudecode-plugins` marketplace
 
 ```
-/plugin marketplace add github.com/boosunwoo/session-tracker
+/plugin marketplace add github.com/boosunwoo/claudecode-plugins
 /plugin install session-tracker
 ```
 
-Or, if you've added this plugin to an existing marketplace, just:
+### Already added a different marketplace that lists this plugin?
 
 ```
 /plugin install session-tracker@<marketplace-name>
 ```
 
 That's it — the `SessionEnd` hook registers automatically and you'll see your first record in `~/claude-sessions/` the next time you exit Claude Code.
+
+> **Why not `marketplace add github.com/boosunwoo/session-tracker`?**
+> That URL points to *this* repo, which is a plugin (has `.claude-plugin/plugin.json`), not a marketplace (which would have `.claude-plugin/marketplace.json` listing plugins). `marketplace add` only accepts marketplace repos.
 
 ## Usage
 

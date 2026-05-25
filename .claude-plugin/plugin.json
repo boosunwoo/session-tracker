@@ -1,6 +1,6 @@
 {
   "name": "session-tracker",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Save each Claude Code session as a browseable markdown record in ~/claude-sessions/ with title, summary, key decisions, modified files, and a resume command. Auto-saves on session end and supports manual refinement via /session-tracker.",
   "author": {
     "name": "boosunwoo",
