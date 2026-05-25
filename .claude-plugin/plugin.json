@@ -1,0 +1,13 @@
+{
+  "name": "session-tracker",
+  "version": "0.1.0",
+  "description": "Save each Claude Code session as a browseable markdown record in ~/claude-sessions/ with title, summary, key decisions, modified files, and a resume command. Auto-saves on session end and supports manual refinement via /session-tracker.",
+  "author": {
+    "name": "boosunwoo",
+    "url": "https://github.com/boosunwoo"
+  },
+  "homepage": "https://github.com/boosunwoo/session-tracker",
+  "repository": "https://github.com/boosunwoo/session-tracker",
+  "license": "MIT",
+  "keywords": ["session", "history", "productivity", "resume", "tracking"]
+}

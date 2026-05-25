@@ -1,0 +1,16 @@
+{
+  "description": "Auto-save a session summary to ~/claude-sessions/ when Claude Code exits.",
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/skills/session-tracker/extract.py --from-hook --write --auto",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
