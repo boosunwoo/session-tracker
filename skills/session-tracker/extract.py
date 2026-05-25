@@ -263,6 +263,7 @@ def main():
     ap.add_argument("--auto", action="store_true", help="Auto mode (no AI summary required)")
     ap.add_argument("--summary", default="", help="AI-generated summary text")
     ap.add_argument("--decisions", default="", help="AI-generated decisions list (markdown)")
+    ap.add_argument("--title", default="", help="Override the AI-generated session title (also affects filename slug)")
     args = ap.parse_args()
 
     if args.from_hook:
@@ -281,6 +282,9 @@ def main():
         path = find_latest_jsonl()
 
     data = parse_jsonl(path)
+
+    if args.title:
+        data["ai_title"] = args.title
 
     if not args.write:
         print(json.dumps(data, indent=2, ensure_ascii=False))
